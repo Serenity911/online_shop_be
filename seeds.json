@@ -1,0 +1,14 @@
+[
+    {
+        "model": "products.Product",
+        "fields":{
+            "product_name": "Banana",
+            "description": "It is yellow and sometimes has a nodemon, dude",
+            "image_url": "google.com",
+            "price": "3",
+            "stock_quantity": "10"
+        }
+    }
+]
+
+    
