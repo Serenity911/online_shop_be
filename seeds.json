@@ -1,14 +1,52 @@
 [
     {
         "model": "products.Product",
-        "fields":{
+        "fields": {
             "product_name": "Banana",
             "description": "It is yellow and sometimes has a nodemon, dude",
             "image_url": "google.com",
             "price": "3",
             "stock_quantity": "10"
         }
+    },
+    {
+        "model": "products.Product",
+        "fields": {
+            "product_name": "Pear",
+            "description": "Yummy",
+            "image_url": "google.com",
+            "price": "5",
+            "stock_quantity": "20"
+        }
+    },
+    {
+        "model": "products.Product",
+        "fields": {
+            "product_name": "Apple",
+            "description": "An apple a day, you know",
+            "image_url": "google.com",
+            "price": "2",
+            "stock_quantity": "50"
+        }
+    },
+    {
+        "model": "products.Product",
+        "fields": {
+            "product_name": "Milk",
+            "description": "From cows to you",
+            "image_url": "google.com",
+            "price": "5",
+            "stock_quantity": "10"
+        }
+    },
+    {
+        "model": "products.Product",
+        "fields": {
+            "product_name": "Bread",
+            "description": "Delicious",
+            "image_url": "google.com",
+            "price": "1",
+            "stock_quantity": "5"
+        }
     }
 ]
-
-    
