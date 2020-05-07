@@ -3,6 +3,7 @@
         "model": "products.Product",
         "fields": {
             "product_name": "Banana",
+            "category": "fruit",
             "description": "It is yellow and sometimes has a nodemon, dude",
             "image_url": "google.com",
             "price": "3",
@@ -13,6 +14,7 @@
         "model": "products.Product",
         "fields": {
             "product_name": "Pear",
+            "category": "fruit",
             "description": "Yummy",
             "image_url": "google.com",
             "price": "5",
@@ -23,6 +25,7 @@
         "model": "products.Product",
         "fields": {
             "product_name": "Apple",
+            "category": "fruit",
             "description": "An apple a day, you know",
             "image_url": "google.com",
             "price": "2",
@@ -33,6 +36,7 @@
         "model": "products.Product",
         "fields": {
             "product_name": "Milk",
+            "category": "dairy",
             "description": "From cows to you",
             "image_url": "google.com",
             "price": "5",
@@ -43,6 +47,7 @@
         "model": "products.Product",
         "fields": {
             "product_name": "Bread",
+            "category": "wheat",
             "description": "Delicious",
             "image_url": "google.com",
             "price": "1",
