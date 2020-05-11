@@ -7,7 +7,7 @@ class Product(models.Model):
     category = models.TextField(null=False)
     description = models.TextField(null=False)
     image_url = models.CharField(max_length=255)
-    price = models.IntegerField()
+    price = models.DecimalField(max_digits=5, decimal_places=2)
     stock_quantity = models.IntegerField()
 
     def __str__(self):
