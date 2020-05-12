@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from products import views
+from products import views as viewProducts
+from orders import views as viewOrders
 
 router = routers.DefaultRouter()
-router.register(r'products', views.ProductView, 'product')
+router.register(r'products', viewProducts.ProductView, 'product')
+router.register(r'orders', viewOrders.OrderView, 'order')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

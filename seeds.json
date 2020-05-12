@@ -8,7 +8,8 @@
             "image_url": "google.com",
             "price": "3",
             "stock_quantity": "10"
-        }
+        },
+        "pk": 1
     },
     {
         "model": "products.Product",
@@ -19,7 +20,8 @@
             "image_url": "google.com",
             "price": "5",
             "stock_quantity": "20"
-        }
+        },
+        "pk": 2
     },
     {
         "model": "products.Product",
@@ -41,7 +43,9 @@
             "image_url": "google.com",
             "price": "5",
             "stock_quantity": "10"
-        }
+        },
+        "pk": 3
+
     },
     {
         "model": "products.Product",
@@ -52,6 +56,17 @@
             "image_url": "google.com",
             "price": "1",
             "stock_quantity": "5"
-        }
+        },
+        "pk": 4
+    },
+    {
+        "model": "orders.Order",
+        "fields": {
+            "order_date": "2020-12-01",
+            "products": [1,2,3],
+            "delivery_address": "1 Edinburgh Street",
+            "delivery_postcode": "EH00UU"
+        },
+        "pk": 1
     }
 ]

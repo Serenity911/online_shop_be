@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'orders',
     'products',
+    'customers',
     'corsheaders',
     'rest_framework',
     'django.contrib.admin',
