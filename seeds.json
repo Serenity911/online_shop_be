@@ -5,7 +5,7 @@
             "product_name": "Banana",
             "category": "fruit",
             "description": "It is yellow and sometimes has a nodemon, dude",
-            "image_url": "google.com",
+            "image_url": "https://picsum.photos/450/300",
             "price": "3",
             "stock_quantity": "10"
         },
@@ -17,7 +17,7 @@
             "product_name": "Pear",
             "category": "fruit",
             "description": "Yummy",
-            "image_url": "google.com",
+            "image_url": "https://picsum.photos/450/300",
             "price": "5",
             "stock_quantity": "20"
         },
@@ -29,7 +29,7 @@
             "product_name": "Apple",
             "category": "fruit",
             "description": "An apple a day, you know",
-            "image_url": "google.com",
+            "image_url": "https://picsum.photos/450/300",
             "price": "2",
             "stock_quantity": "50"
         }
@@ -40,7 +40,7 @@
             "product_name": "Milk",
             "category": "dairy",
             "description": "From cows to you",
-            "image_url": "google.com",
+            "image_url": "https://picsum.photos/450/300",
             "price": "5",
             "stock_quantity": "10"
         },
@@ -53,7 +53,7 @@
             "product_name": "Bread",
             "category": "wheat",
             "description": "Delicious",
-            "image_url": "google.com",
+            "image_url": "https://picsum.photos/450/300",
             "price": "1",
             "stock_quantity": "5"
         },
