@@ -10,6 +10,12 @@ class Order(models.Model):
     delivery_address = models.CharField(max_length=200)
     delivery_postcode = models.CharField(max_length=7)
 
+    # def save(self, *args, **kwargs):
+    #     print('DAMN YOU')
+    #     Product_Price.ordered_price = Product_Price.get_price()
+    #     print(Product_Price.ordered_price)
+    #     super().save(*args, **kwargs)
+
     def __str__(self):
         return self.delivery_address
 
@@ -17,7 +23,13 @@ class Order(models.Model):
 class Product_Price(models.Model):
     product = models.ForeignKey(products.Product, related_name='product_price', on_delete=models.CASCADE)
     order = models.ForeignKey(Order, related_name='product_price', on_delete=models.CASCADE)
-    # def product_price:
-    #     return product.objects.get()
+    ordered_price = models.DecimalField(max_digits=5, decimal_places=2, null = True)
+    # def get_price(self):
+    #     return products.Product.objects.get(pk = int(product))
 
-    ordered_price = models.DecimalField(default='1.00', max_digits=5, decimal_places=2, editable=False)
+    # def save(self, *args, **kwargs):
+    #     print('DAMN YOU')
+    #     self.ordered_price = self.get_price()
+    #     print(self.ordered_price)
+    #     super().save(*args, **kwargs)
+
