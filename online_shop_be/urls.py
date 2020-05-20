@@ -15,15 +15,35 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework import routers
-from products import views as viewProducts
-from orders import views as viewOrders
+from products.views import *
+from orders.views import * 
 
-router = routers.DefaultRouter()
-router.register(r'products', viewProducts.ProductView, 'product')
-router.register(r'orders', viewOrders.OrderView, 'order')
+# from rest_framework import routers
 
+# router = routers.DefaultRouter()
+# router.register(r'products', viewProducts.ProductView, 'product')
+# router.register(r'orders', viewOrders.OrderView, 'order')
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('api/', include(router.urls))
+# ]
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))
+
+    path("api/orders/", 
+         OrderListCreateAPIView.as_view(), 
+         name="order-list"),
+
+    path("api/orders/<int:pk>/", 
+         OrderDetailAPIView.as_view(), 
+         name="order-detail"),
+
+    path("api/products/", 
+         ProductListCreateAPIView.as_view(), 
+         name="product-list"),
+         
+    path("api/products/<int:pk>", 
+         ProductListCreateAPIView.as_view(), 
+         name="product-detail")
 ]
