@@ -11,13 +11,13 @@ class ProductPriceSerializer(serializers.ModelSerializer):
                                                    read_only=True,
                                                    view_name="order-detail")
     ordered_price = 1
-    
+
     class Meta:
         model = ProductPrice
         fields = "__all__"
 
 class OrderSerializer(serializers.ModelSerializer):
-    products = serializers.StringRelatedField()
+    products = serializers.PrimaryKeyRelatedField(many=True, queryset=Product.objects.all())
     class Meta:
         model = Order
         exclude = ('id',)
