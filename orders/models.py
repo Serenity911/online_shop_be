@@ -7,8 +7,6 @@ import products.models as products
 class Order(models.Model):
     order_date = models.DateField(auto_now_add = True)
     # customer = models.ForeignKey(customers.Customer, on_delete=models.CASCADE)
-    # products = models.ManyToManyField(products.Product,related_name = "orders")
-    # CHECK: adding the through makes the M2M explicit, and the field product on orders disappears
     products = models.ManyToManyField(products.Product,related_name = "orders", through='ProductPrice')
     delivery_address = models.CharField(max_length=200)
     delivery_postcode = models.CharField(max_length=7)

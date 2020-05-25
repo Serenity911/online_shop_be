@@ -10,5 +10,3 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=5, decimal_places=2)
     stock_quantity = models.IntegerField()
 
-    # def __str__(self):
-    #     return f"{ self.product_name } { self.price }"

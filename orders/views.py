@@ -35,21 +35,6 @@ class OrderListCreateAPIView(APIView):
                 print(get_order_product)
                 updated_line = ProductPrice.objects.filter(order_id = serializer.data["id"], product_id = product_id).update(ordered_price = product_price)
 
-            
-            # order_id = serializer.data["id"]
-            # for product_id in request.data['products']:
-            #     product_price = Product.objects.get(pk=product_id).price
-            #     data_for_serializer = {'product': product_id, 'ordered_price': product_price, 'order': order_id}
-            #     M2M_Serializer = ProductPriceSerializer(data = data_for_serializer)
-            #     print(M2M_Serializer)
-            #     if M2M_Serializer.is_valid():
-            #         print("IS IT IN IS VALID?")
-            #         M2M_Serializer.save()
-            #         return Response(M2M_Serializer.data, status=status.HTTP_201_CREATED)
-            #     return Response(M2M_Serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-
             return Response(serializer.data, status=status.HTTP_201_CREATED)
  
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
