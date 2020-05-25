@@ -23,15 +23,17 @@ class OrderListCreateAPIView(APIView):
 #
         if serializer.is_valid():
             serializer.save()
-            get_line_product_price = ProductPrice.objects.filter(order_id = serializer.data["id"]).first()
-            print(f"this is the table product price: {get_line_product_price}")
+            get_order_product_price = ProductPrice.objects.filter(order_id = serializer.data["id"]).first()
+            print(f"this is the table product price: {get_order_product_price}")
             # price_update = Product.objects.filter(pk = request.data["products"][0])["price"]
             for product_id in request.data["products"]:
                 print(product_id)
                 product = Product.objects.filter(pk=product_id).first()
                 product_price = product.price
                 print(product_price)
-            updated_line = ProductPrice.objects.filter(order_id = serializer.data["id"]).update(ordered_price = product_price)
+                get_order_product = ProductPrice.objects.filter(order_id = serializer.data["id"], product_id = product_id)
+                print(get_order_product)
+                updated_line = ProductPrice.objects.filter(order_id = serializer.data["id"], product_id = product_id).update(ordered_price = product_price)
 
             
             # order_id = serializer.data["id"]

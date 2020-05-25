@@ -44,6 +44,6 @@ urlpatterns = [
          name="product-list"),
          
     path("api/products/<int:pk>", 
-         ProductListCreateAPIView.as_view(), 
+         ProductDetailAPIView.as_view(), 
          name="product-detail")
 ]
