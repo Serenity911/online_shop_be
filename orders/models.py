@@ -17,7 +17,7 @@ class Order(models.Model):
         return self.delivery_address
 
 class ProductPrice(models.Model):
-    product = models.ForeignKey(products.Product, related_name='product_price', on_delete=models.CASCADE)
     order = models.ForeignKey(Order, related_name='product_price', on_delete=models.CASCADE)
+    product = models.ForeignKey(products.Product, related_name='product_price', on_delete=models.CASCADE)
     ordered_price = models.DecimalField(max_digits=5, decimal_places=2, null = True)
 
